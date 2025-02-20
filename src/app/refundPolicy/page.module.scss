@@ -1,0 +1,120 @@
+@import "../../assets/styles/app";
+
+.page {
+  @include container2;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 100px;
+
+  @include desktop2 {
+    padding-top: 108px;
+    padding-bottom: 136px;
+  }
+
+  & > svg {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 296px;
+    height: 298px;
+
+    @include desktop2 {
+      top: 50%;
+      transform: translate(50%, -50%);
+      width: 720px;
+      height: 724px;
+      left: unset;
+      right: calc(0.5 * (100vw - 1160px));
+    }
+  }
+
+  .inner {
+    @include inner2;
+    position: relative;
+    z-index: 2;
+
+    h2.title {
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 120%;
+      color: #283c90;
+
+      @include desktop2 {
+        font-size: 45px;
+      }
+    }
+
+    .divider {
+      width: 64px;
+      height: 2px;
+      margin-top: 16px;
+      background: #f68754;
+
+      @include desktop2 {
+        margin-top: 40px;
+      }
+    }
+
+    .content {
+      //background: rgba(0,0,0,0.1);
+      margin-top: 16px;
+      padding-right: 24px;
+      height: calc(100vh - 100px - 122px);
+      overflow: auto;
+      scrollbar-color: #f68754 #d9d9d9;
+      scrollbar-width: thin;
+
+      @include desktop2 {
+        margin-top: 40px;
+        padding-right: 32px;
+        height: calc(100vh - 136px - 244px);
+      }
+
+      .content_inner {
+
+        .block {
+
+          &:not(:first-child) {
+            margin-top: 10px;
+
+            @include desktop2 {
+              margin-top: 40px;
+            }
+          }
+
+          .block_title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 120%;
+            color: #858585;
+
+            @include desktop2 {
+              font-size: 20px;
+            }
+          }
+
+          .block_text {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 120%;
+            color: #858585;
+
+            @include desktop2 {
+              margin-top: 16px;
+              font-size: 16px;
+            }
+          }
+
+        }
+
+      }
+    }
+
+
+  }
+}

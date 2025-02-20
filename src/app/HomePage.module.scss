@@ -1,0 +1,163 @@
+@import "../assets/styles/app";
+
+.homePage {
+  min-height: 100vh;
+  background: #283c90;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .top {
+    position: relative;
+    background: #f68754;
+    height: 328px;
+    border-radius: 0 0 24px 24px;
+
+    @include desktop {
+      height: auto;
+      border-radius: 0 48px 48px 0;
+    }
+
+    .img_mobile {
+      @include onlyMobile();
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -54px;
+      height: 340px;
+      width: 259px;
+    }
+
+    .img_desktop {
+      @include onlyDesktop();
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -30px;
+      height: 884px;
+      width: auto;
+    }
+
+  }
+
+  .bottom {
+    padding-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #283c90;
+    background-image: url("/png/home/bottom.png");
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+
+    @include desktop {
+      padding-top: 0;
+      padding-left: 80px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    & > svg {
+      width: 178px;
+      height: 42px;
+
+      @include desktop {
+        width: 366px;
+        height: 89px;
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 120%;
+      text-align: center;
+      color: #fff;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      @include desktop {
+        margin-top: 40px;
+        font-size: 35px;
+        text-align: left;
+        width: 560px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .divider {
+      height: 1px;
+      width: 30px;
+      margin-top: 12px;
+      background: #f68754;
+
+      @include desktop {
+        width: 64px;
+        height: 2px;
+        margin-top: 24px;
+      }
+    }
+
+    .about {
+      margin-top: 12px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 120%;
+      text-align: center;
+      color: #fff;
+
+      @include desktop {
+        margin-top: 24px;
+        font-size: 21px;
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+
+      @include desktop {
+        margin-top: 40px;
+        justify-content: flex-start;
+      }
+
+      a {
+        text-decoration: none;
+        width: 86px;
+        height: 25px;
+
+        &:not(:first-child) {
+          margin-left: 5px;
+
+          @include desktop {
+            margin-left: 10px;
+          }
+        }
+
+        @include desktop {
+          width: 180px;
+          height: 52px;
+        }
+
+        svg {
+          width: 86px;
+          height: 25px;
+
+          @include desktop {
+            width: 180px;
+            height: 52px;
+          }
+        }
+      }
+    }
+
+
+  }
+}

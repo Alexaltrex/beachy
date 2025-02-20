@@ -1,0 +1,108 @@
+//========= BREAK POINTS =========//
+@mixin desktop {
+  @media all and (min-width: 1360px) {
+    @content;
+  }
+}
+
+@mixin onlyMobile($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+@mixin onlyDesktop($displayType: block) {
+  display: none;
+
+  @include desktop {
+    display: $displayType;
+    @content;
+  }
+}
+
+// Terms and Conditions, Privacy Policy, Refund Policy
+
+@mixin desktop2 {
+  @media all and (min-width: 1160px) {
+    @content;
+  }
+}
+
+@mixin onlyMobile2($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop2 {
+    display: none;
+  }
+}
+
+@mixin onlyDesktop2($displayType: block) {
+  display: none;
+
+  @include desktop2 {
+    display: $displayType;
+    @content;
+  }
+}
+
+@mixin container2 {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include desktop2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin inner2() {
+  @include desktop2() {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//========= CONTAINERS ===========//
+@mixin container {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin inner() {
+  @include desktop() {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//========= OTHER =========//
+@mixin centerRow() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerColumn() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button() {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
