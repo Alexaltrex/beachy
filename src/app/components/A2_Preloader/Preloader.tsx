@@ -18,7 +18,6 @@ const [hide, setHide] = useState(false);
             [style.preloader]: true,
             [style.preloader_hide]: hide,
         })}>
-
             <video src="/mp4/beachy.mp4"
                    playsInline={true}
                    loop={true}
