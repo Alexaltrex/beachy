@@ -1,14 +1,13 @@
 @import "../assets/styles/app";
 
 .homePage {
-  min-height: 100vh;
+  height: 100vh;
   background: #283c90;
 
   @include desktop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
 
   .top {
     position: relative;
@@ -130,8 +129,8 @@
 
       a {
         text-decoration: none;
-        width: 86px;
-        height: 25px;
+        width: 1.2 * 86px;
+        height: 1.2 * 25px;
 
         &:not(:first-child) {
           margin-left: 5px;
@@ -147,8 +146,8 @@
         }
 
         svg {
-          width: 86px;
-          height: 25px;
+          width: 1.2 * 86px;
+          height: 1.2 * 25px;
 
           @include desktop {
             width: 180px;

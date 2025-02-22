@@ -1,17 +1,15 @@
 'use client'
 
 import style from "./Preloader.module.scss"
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {clsx} from "clsx";
 
 export const Preloader = () => {
 const [hide, setHide] = useState(false);
 
-    useEffect(() => {
-        const timer = setTimeout(() => setHide(true), 8000)
-
-        return () => clearTimeout(timer);
-    }, []);
+    const onEnded = () => {
+        setHide(true)
+    }
 
     return (
         <div className={clsx({
@@ -20,10 +18,14 @@ const [hide, setHide] = useState(false);
         })}>
             <video src="/mp4/beachy.mp4"
                    playsInline={true}
-                   loop={true}
+                   loop={false}
                    muted={true}
                    autoPlay={true}
                    className={style.logo}
+                   onEnded={onEnded}
+                   onLoadedData={() => {
+                       console.log("onLoaded - ", new Date())
+                   }}
             />
 
         </div>

@@ -5,6 +5,9 @@
   z-index: 999;
   top: 0;
   left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   .logo {
     text-decoration: none;
@@ -27,7 +30,43 @@
         width: 42px;
         height: 42px;
       }
+    }
+  }
 
+  .musicBtn {
+    @include button;
+    @include centerRow;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 0 0 8px;
+    background-color: #283c90;
+
+    @include desktop {
+      width: 60px;
+      height: 60px;
+    }
+
+    svg {
+      fill: #F68754;
+      width: 28px;
+      height: 28px;
+
+      @include desktop {
+        width: 42px;
+        height: 42px;
+      }
+
+
+    }
+
+    &_home {
+      @include desktop {
+        background-color: #F68754;
+
+        svg {
+          fill: #283c90;
+        }
+      }
     }
   }
 }

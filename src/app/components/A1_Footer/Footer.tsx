@@ -8,7 +8,6 @@ import Link from "next/link";
 
 export const Footer = () => {
     const pathname = usePathname();
-    console.log(pathname)
 
     return (
         <footer className={style.footer}>
