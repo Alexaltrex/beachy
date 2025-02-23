@@ -56,10 +56,10 @@
     flex-direction: column;
     align-items: center;
     background: #283c90;
-    background-image: url("/png/home/bottom.png");
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
+    //background-image: url("/png/home/bottom.png");
+    //background-blend-mode: multiply;
+    //background-position: center;
+    //background-size: cover;
 
     @include desktop {
       flex-grow: unset;
