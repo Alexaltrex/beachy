@@ -40,7 +40,7 @@ const HomePage = () => {
                 <div className={style.background}>
                     <video src="/mp4/water.mp4"
                            playsInline={true}
-                           loop={false}
+                           loop={true}
                            muted={true}
                            autoPlay={true}
 
