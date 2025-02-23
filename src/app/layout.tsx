@@ -20,7 +20,7 @@ export default function RootLayout({
         <html lang="en">
         <body className={clsx(inter.className)}>
 
-        {/*<Preloader/>*/}
+        <Preloader/>
 
         <Header/>
 
