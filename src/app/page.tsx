@@ -3,6 +3,7 @@ import style from "./HomePage.module.scss"
 import Image from 'next/image'
 import {svgIcons} from "../assets/svgIcons";
 
+
 export const metadata: Metadata = {
     title: "Beachy - Home",
 };
@@ -35,6 +36,17 @@ const HomePage = () => {
             </div>
 
             <div className={style.bottom}>
+
+                <div className={style.background}>
+                    <video src="/mp4/water.mp4"
+                           playsInline={true}
+                           loop={false}
+                           muted={true}
+                           autoPlay={true}
+
+                    />
+                </div>
+
 
                 {svgIcons.logo_full}
 

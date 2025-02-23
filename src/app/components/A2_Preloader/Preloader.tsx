@@ -23,9 +23,9 @@ const [hide, setHide] = useState(false);
                    autoPlay={true}
                    className={style.logo}
                    onEnded={onEnded}
-                   onLoadedData={() => {
-                       console.log("onLoaded - ", new Date())
-                   }}
+                   // onLoadedData={() => {
+                   //     console.log("onLoaded - ", new Date())
+                   // }}
             />
 
         </div>
