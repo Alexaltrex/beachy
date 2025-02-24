@@ -5,6 +5,7 @@ import {clsx} from "clsx";
 import {Header} from "./components/A0_Header/Header";
 import {Footer} from "./components/A1_Footer/Footer";
 import {Preloader} from "./components/A2_Preloader/Preloader";
+import style from "./layout.module.scss"
 
 export const metadata: Metadata = {
     title: "Beachy",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={clsx(inter.className)}>
+        <body className={clsx(style.layout, inter.className)}>
 
         <Preloader/>
 
