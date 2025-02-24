@@ -43,6 +43,7 @@
       transform: translateY(-50%);
       right: -30px;
       height: 884px;
+      max-height: calc(100vh - 32px);
       width: auto;
     }
 
@@ -83,9 +84,11 @@
         left: -48px;
         right: 0;
         width: auto;
+
       }
 
       & > video {
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;

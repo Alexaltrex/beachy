@@ -24,14 +24,10 @@ const HomePage = () => {
                     />
                 </div>
 
-                <div className={style.img_desktop}>
-                    <Image src="/png/home/top_desktop.png"
-                           width={713}
-                           height={884}
-                           priority={true}
-                           alt=""
-                    />
-                </div>
+                <img src="/png/home/top_desktop.png"
+                     alt=""
+                     className={style.img_desktop}
+                />
 
             </div>
 
